@@ -26,7 +26,7 @@ const Review = () => {
       return checkNumber(newIndex);
     });
   };
-  // Display the prev item when you click on the prevPerson button
+  // Display the prev item when you click on the prevPerson button.
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
@@ -34,8 +34,10 @@ const Review = () => {
     });
   };
 
+  // randomperson button
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * people.length);
+    // Ensure the same number does not appear consistently.
     if (randomNumber === index ) {
       randomNumber = index + 1;
     }
@@ -50,7 +52,7 @@ const Review = () => {
           <FaQuoteRight />
         </span>
       </div>
-      <h4 className='author'>{name}</h4>
+      <h4 className='text-gray-600 text-lg bg-orangge'>{name}</h4>
       <p className="job">{job}</p>
       <p className="info">{text}</p>
       <div className="button-container">
